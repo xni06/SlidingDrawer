@@ -1,7 +1,5 @@
 package android.support.widget;
 
-import java.lang.ref.WeakReference;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,6 +17,8 @@ import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.Animator.AnimatorListener;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
+
+import java.lang.ref.WeakReference;
 
 @SuppressLint("NewApi")
 public class SlidingDrawer extends RelativeLayout implements OnTouchListener, AnimatorListener {
@@ -132,7 +132,7 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 	 *            defaults.
 	 */
 	public SlidingDrawer(Context context, AttributeSet attrs, int defStyleAttr,
-			int defStyleRes) {
+                         int defStyleRes) {
 		super(context, attrs);
 
 		final TypedArray a = context.obtainStyledAttributes(attrs,
@@ -172,6 +172,7 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 
 	@Override
 	protected void onFinishInflate() {
+		super.onFinishInflate();
 		mHandle = findViewById(mHandleId);
 		if (mHandle == null) {
 			throw new IllegalArgumentException(
@@ -193,8 +194,8 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 			throw new IllegalArgumentException(
 					"The content attribute is must refer to an existing child.");
 		}
-		
-		
+
+
 	}
 	
 	@Override
@@ -285,11 +286,11 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 	
 	private void adjustLayoutMargin() {
 		ViewGroup.LayoutParams lp = getLayoutParams();
-		if(null == lp || !(lp instanceof ViewGroup.MarginLayoutParams)) {
+		if(null == lp || !(lp instanceof MarginLayoutParams)) {
 			return;
 		}
-		
-		ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) lp;
+
+		MarginLayoutParams mlp = (MarginLayoutParams) lp;
 		if(isHorizontal()) {
 			if(ORIENTATION_RIGHT_TO_LEFT == mOrientation) {
 				mlp.rightMargin = 0;
