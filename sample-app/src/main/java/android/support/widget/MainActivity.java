@@ -3,7 +3,7 @@ package android.support.widget;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class SlidingDrawerActivity extends Activity {
+public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
