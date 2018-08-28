@@ -1,0 +1,28 @@
+ext {
+    upload = [
+            version:                  "0.0.1",
+            name:                     "sliding-drawer",
+            groupId:                  "com.hiafi.android.widget",
+            description:              "Enhancement for the deprecated android.widget.SlidingDrawer class",
+            scm:                      "https://github.com/xni06/SlidingDrawer.git",
+            scmUrl:                   "https://github.com/xni06/SlidingDrawer",
+            pkgIssueTrackerUrl:       "https://github.com/xni06/SlidingDrawer",
+            artifactId:               "sliding-drawer", // should match the module name
+            pkgRepo:                  "maven",
+            licenseName:              ["Apache-2.0"],
+            licenseUrl:               "http://www.apache.org/licenses/LICENSE-2.0.txt",
+            packaging:                "aar",
+            dryRun:                   false,
+            includeSource:            false,
+            includeJavaDoc:           false,
+            publish:                  true,
+            override:                 false,
+            pkgPublicDownloadNumbers: false,
+            pkgVersionGpgSign:        true,
+            pkgVersionReleased:       new Date()
+    ]
+}
+
+apply from: 'https://tinyurl.com/upload-config-mapping-gradle'
+apply from: 'https://tinyurl.com/upload-gradle'
+
