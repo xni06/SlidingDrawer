@@ -1,3 +1,7 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+    id "com.github.dcendents.android-maven" version "2.0"
+}
 apply plugin: 'com.android.library'
 
 android {
@@ -14,3 +18,6 @@ android {
 dependencies {
     implementation 'com.nineoldandroids:library:2.4.0'
 }
+
+apply from: '../gradle/upload.gradle'
+
