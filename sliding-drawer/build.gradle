@@ -16,7 +16,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.nineoldandroids:library:2.4.0'
+    api 'com.nineoldandroids:library:2.4.0'
 }
 
 apply from: '../gradle/upload.gradle'
