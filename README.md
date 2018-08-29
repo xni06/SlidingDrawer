@@ -1,7 +1,7 @@
 # Introduction
 [android.widget.SlidingDrawer](http://developer.android.com/reference/android/widget/SlidingDrawer.html) was deprecated in API level 17.
 
-This is a fork of https://github.com/wtao901231/SlidingDrawer which adds some additional features - it has been modified so that it can be built using Gradle and be uploaded to bintray/jcenter where it can be easily consumed.
+This is a fork of https://github.com/wtao901231/SlidingDrawer with some extended capabilities and is now consumable.
 
 ## How to consume
 See [bintray](https://bintray.com/xni0601/maven/sliding-drawer)
