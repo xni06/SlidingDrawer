@@ -9,7 +9,8 @@ public class MainActivity extends Activity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
     private SlidingDrawer slidingDrawer;
-    private int count;
+    private int count1;
+    private int count2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main_activity);
 
         slidingDrawer = findViewById(R.id.slidingDrawer);
+
+        findViewById(R.id.interactiveWidget1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView) v).setText(String.valueOf(++count1));
+            }
+        });
+        findViewById(R.id.interactiveWidget2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView) v).setText(String.valueOf(++count2));
+            }
+        });
+
     }
 
     public void onOpen(View view) {
@@ -35,8 +50,4 @@ public class MainActivity extends Activity {
         slidingDrawer.setDrawerClosed(true);
     }
 
-    public void onTextViewClick(View view) {
-        TextView tv = findViewById(R.id.interactive_widget);
-        tv.setText(String.valueOf(++count));
-    }
 }

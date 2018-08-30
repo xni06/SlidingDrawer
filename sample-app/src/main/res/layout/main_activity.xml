@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:demo="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,11 +11,11 @@
         android:layout_alignParentTop="true"
         android:layout_margin="0dp"
         android:orientation="vertical"
-        demo:animateOnClick="true"
-        demo:content="@+id/content"
-        demo:handle="@+id/handle"
-        demo:orientation="topDown"
-        demo:tensionTween="#ff33b5e5">
+        app:animateOnClick="true"
+        app:content="@+id/content"
+        app:handle="@+id/handle"
+        app:orientation="topDown"
+        app:tensionTween="#ff33b5e5">
 
         <FrameLayout
             android:id="@+id/content"
@@ -28,29 +28,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|top"
+                android:layout_gravity="top|left"
                 android:clickable="false"
                 android:text="canvas" />
 
             <TextView
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="260dp"
+                android:layout_gravity="start"
+                android:layout_margin="20dp"
                 android:background="@android:color/holo_green_light"
                 android:clickable="true"
-                android:gravity="top|center"
+                android:gravity="top|left"
                 android:text="custom panel" />
 
             <TextView
-                android:id="@+id/interactive_widget"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
+                android:id="@+id/interactiveWidget1"
+                android:layout_width="260dp"
+                android:layout_height="140dp"
+                android:layout_margin="40dp"
                 android:background="@android:color/background_light"
                 android:clickable="true"
-                android:gravity="center"
-                android:onClick="onTextViewClick"
-                android:text="Click me!" />
+                android:gravity="top|left"
+                android:text="click\nme!" />
+
+            <TextView
+                android:id="@+id/interactiveWidget2"
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="200dp"
+                android:background="@android:color/holo_blue_bright"
+                android:clickable="true"
+                android:gravity="top|left"
+                android:text="click\nme!" />
 
         </FrameLayout>
 
