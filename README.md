@@ -12,7 +12,7 @@ See [bintray](https://bintray.com/xni0601/maven/sliding-drawer)
 ## Upload to bintray
 Update `version` element within `upload.gradle`
 ```
-./gradlew clean slider-drawer:build install
+./gradlew clean sliding-drawer:build install
 ./gradlew bintrayUpload
 ```
 For further information, please see [How to distribute Android library in a convenient way](https://android.jlelse.eu/how-to-distribute-android-library-in-a-convenient-way-d43fb68304a7)
