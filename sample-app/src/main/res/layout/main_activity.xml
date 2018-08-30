@@ -5,10 +5,11 @@
     android:layout_height="match_parent">
 
     <android.support.widget.SlidingDrawer
+        android:id="@+id/slidingDrawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_margin="48dp"
+        android:layout_margin="0dp"
         android:orientation="vertical"
         demo:animateOnClick="true"
         demo:content="@+id/content"
@@ -16,14 +17,42 @@
         demo:orientation="topDown"
         demo:tensionTween="#ff33b5e5">
 
-        <TextView
+        <FrameLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ff33b5e5"
-            android:gravity="center"
-            android:text="content"
-            android:textColor="@android:color/white" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/holo_orange_light">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:clickable="false"
+                android:text="canvas" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_green_light"
+                android:clickable="true"
+                android:gravity="top|center"
+                android:text="custom panel" />
+
+            <TextView
+                android:id="@+id/interactive_widget"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@android:color/background_light"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextViewClick"
+                android:text="Click me!" />
+
+        </FrameLayout>
 
         <TextView
             android:id="@+id/handle"
@@ -35,5 +64,41 @@
             android:text="handle"
             android:textColor="@android:color/white" />
     </android.support.widget.SlidingDrawer>
+
+    <Button
+        android:id="@+id/open_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/close_button"
+        android:onClick="onOpen"
+        android:text="Open" />
+
+    <Button
+        android:id="@+id/open_button_animated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onOpenAnimated"
+        android:text="Open (A)" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClose"
+        android:text="Close" />
+
+    <Button
+        android:id="@+id/close_button_animated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/open_button_animated"
+        android:onClick="onCloseAnimated"
+        android:text="Close (A)" />
 
 </RelativeLayout>

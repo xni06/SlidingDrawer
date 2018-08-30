@@ -194,8 +194,13 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 			throw new IllegalArgumentException(
 					"The content attribute is must refer to an existing child.");
 		}
+		mContent.setOnClickListener(new OnClickListener() {
 
-
+			@Override
+			public void onClick(View v) {
+				trigglerDrawer(mAnimateOnClick);
+			}
+		});
 	}
 	
 	@Override
