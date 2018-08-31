@@ -31,6 +31,12 @@ public class MainActivity extends Activity {
                 ((TextView) v).setText(String.valueOf(++count2));
             }
         });
+        findViewById(R.id.maskView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                slidingDrawer.setsetDrawerOpen(false);
+            }
+        });
 
     }
 

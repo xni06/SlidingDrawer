@@ -4,6 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <View
+        android:id="@+id/maskView"
+        android:layout_width="187dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:background="@android:color/holo_purple" />
+
     <android.support.widget.SlidingDrawer
         android:id="@+id/slidingDrawer"
         android:layout_width="match_parent"
@@ -68,7 +76,7 @@
         <TextView
             android:id="@+id/handle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="3dp"
             android:layout_alignParentBottom="true"
             android:background="#ff0099cc"
             android:gravity="center"
