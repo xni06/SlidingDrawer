@@ -316,11 +316,11 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 		if(mExpanded) {
 			setDrawerClosed(animate);
 		} else {
-			setsetDrawerOpen(animate);
+			setDrawerOpen(animate);
 		}
 	}
 	
-	public void setsetDrawerOpen(boolean animate) {
+	public void setDrawerOpen(boolean animate) {
 		mExpanded = true;
 		
 		if(animate) {
@@ -451,7 +451,7 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 		boolean willBounceBack = shouldBounceBack((int) deltaDistance);
 		if(mExpanded) {
 			if(willBounceBack) {
-				setsetDrawerOpen(true);
+				setDrawerOpen(true);
 			} else {
 				setDrawerClosed(true);
 			}
@@ -459,7 +459,7 @@ public class SlidingDrawer extends RelativeLayout implements OnTouchListener, An
 			if(willBounceBack) {
 				setDrawerClosed(true);
 			} else {
-				setsetDrawerOpen(true);
+				setDrawerOpen(true);
 			}
 		}
 	}

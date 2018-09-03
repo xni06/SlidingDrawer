@@ -34,18 +34,18 @@ public class MainActivity extends Activity {
         findViewById(R.id.maskView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                slidingDrawer.setsetDrawerOpen(false);
+                slidingDrawer.setDrawerOpen(false);
             }
         });
 
     }
 
     public void onOpen(View view) {
-        slidingDrawer.setsetDrawerOpen(false);
+        slidingDrawer.setDrawerOpen(false);
     }
 
     public void onOpenAnimated(View view) {
-        slidingDrawer.setsetDrawerOpen(true);
+        slidingDrawer.setDrawerOpen(true);
     }
 
     public void onClose(View view) {
