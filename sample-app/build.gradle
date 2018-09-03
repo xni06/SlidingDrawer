@@ -19,7 +19,7 @@ android {
 
 dependencies {
     implementation project(':sliding-drawer')
-//    implementation 'com.hiafi.android.widget:sliding-drawer:0.0.2'
+//    implementation 'com.hiafi.android.widget:sliding-drawer:0.0.5'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
 }

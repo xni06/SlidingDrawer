@@ -1,10 +1,9 @@
-package android.support.widget;
+package com.hiafi.android.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.util.AttributeSet;
+import android.graphics.drawable.Drawable;import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;

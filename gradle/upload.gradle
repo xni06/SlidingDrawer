@@ -1,6 +1,6 @@
 ext {
     upload = [
-            version:                  "0.0.2",
+            version:                  "0.0.5",
             name:                     "sliding-drawer",
             groupId:                  "com.hiafi.android.widget",
             description:              "Enhancement for the deprecated android.widget.SlidingDrawer class",
